@@ -1,0 +1,23 @@
+{% extends "shop/menu.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    {% block pagename %}
+        {{ block.super }}
+    {% endblock %}
+
+    {% block menu %}
+        {{ block.super }}
+    {% endblock %}
+
+    {% block content %}
+        <h3>Извините, ваша корзина пуста</h3>
+        <button onclick = "window.location.href ='/platform/catalog'">Перейти в каталог</button>
+        {{ block.super }}
+    {% endblock %}
+</body>
+</html>

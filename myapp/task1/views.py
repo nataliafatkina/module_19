@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from .models import *
+<<<<<<< HEAD
 from django.core.paginator import Paginator
+=======
+>>>>>>> 89fcca4ffe10f3f3070a382d305293d40c0785fe
 
 
 # Create your views here.
@@ -63,6 +66,7 @@ def sign_up_by_html(request):
         'success': success,
         'users': users
     }
+
 
     return render(request, 'sign_up/registration_page.html', context)
 

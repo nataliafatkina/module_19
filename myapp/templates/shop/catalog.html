@@ -1,0 +1,39 @@
+{% extends "shop/menu.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    {% block pagename %}
+        {{ block.super }}
+    {% endblock %}
+
+    {% block menu %}
+        {{ block.super }}
+    {% endblock %}
+
+    {% block content %}
+        {% for i in games %}
+            <ul>
+                <li>
+                    {{i.title}} | {{i.description}}. Стоимость: {{i.cost}} <button>Купить</button>
+                </li>
+            </ul>
+        {% endfor %}
+        <button onclick = "window.location.href ='/platform/basket'">Перейти в корзину</button>
+        {{ block.super }}
+    {% endblock %}
+</body>
+<body>
+
+    <ul>
+        <li>{{ game_1}} <button>Купить</button></li>
+        <li>{{ game_2}} <button>Купить</button></li>
+        <li>{{ game_3}} <button>Купить</button></li>
+    </ul>
+    <button onclick = "window.location.href ='/platform/basket'">Перейти в корзину</button>
+    <button onclick = "window.location.href ='/platform'">Вернуться на главную</button>
+</body>
+</html>

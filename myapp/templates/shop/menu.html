@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<header>
+    {% block pagename %}
+    <h1>{{ title }}</h1>
+    {% endblock %}
+</header>
+
+<body>
+    {% block menu %}
+    <p><a href = "/platform">Главная</a></p>
+    <p><a href = "/platform/catalog">Каталог товаров</a></p>
+    <p><a href = "/platform/basket">Корзина</a></p>
+    {% endblock %}
+</body>
+
+
+<body>
+    {% block content %}
+        <button onclick = "window.location.href ='/platform'">Вернуться на главную</button>
+    {% endblock %}
+</body>
